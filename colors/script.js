@@ -24,5 +24,6 @@ $('#palette').click(function(e) {
         this.canvas.getContext('2d').drawImage(this, 0, 0, this.width, this.height);
     }
       var pixelData = this.canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
-      alert( '#'+rgbToHex(pixelData[0], pixelData[1], pixelData[2]) );
+      var color = '#'+rgbToHex(pixelData[0], pixelData[1], pixelData[2]);
+      window.prompt("Copy to clipboard: Ctrl+C, Enter", color);
   });
