@@ -19,6 +19,9 @@ ee-gray-light = #fbfbf9
   border 0
   outline none
   font-family 'PT Sans', sans-serif
+  font-weight normal
+  color ee-black
+
 
 // ui
 body
@@ -26,16 +29,87 @@ body
 h1
   font-size 35px
 h2
-  font-size 32px
+  font-size 30px
 h3
-  font-size 27px
-h4
   font-size 25px
+h4
+  font-size 20px
+h5
+  font-size 17px
 a
   color #3b5998
 
 // components
+table
+  width 100%
+  border-collapse collapse
+  th
+    border-bottom 1px ee-outline-gray solid
+  td, th
+    padding 10px
+    text-align left
+  tbody
+    tr:hover
+      background-color #ECF0F1
+
+ul
+  li
+    padding 10px
+    list-style-type none
+    &.selected
+      background-color #ECF0F1
+    &:hover
+      background-color #ECF0F1
+
+input[type="text"]
+  font-size 16px
+  padding 10px
+  border-bottom 1px #ECF0F1 solid
+  width 100%
+  height auto
+
+input[type="radio"]
+  font-size 14px
+  margin 10px
+
+input[type="checkbox"]
+  font-size 14px
+  margin 10px
+
+textarea
+  font-size 16px
+  padding 10px
+  border 1px #ECF0F1 solid
+  width 100%
+  resize none
+
+select
+  appearance none
+  -webkit-appearance none
+  -moz-appearance none
+  padding 10px
+  font-size 14px
+  border-radius 0px
+  border-bottom 2px #ECF0F1 solid
+  cursor pointer
+
+.icon
+  font-size 25px
+  font-family 'Material Icons'
+  display inline-block
+
 .ee
+  &--top-panel
+    padding 10px
+    background-color #ECF0F1
+    color #2574A9
+    margin-bottom 10px
+  &--footer-panel
+    padding 10px
+    background-color #ECF0F1
+    color #2574A9
+    font-size 14px
+    margin-top 50px
   &--panel
     margin 10px
     padding 10px
@@ -49,15 +123,10 @@ a
     cursor pointer
     user-select none
     display inline-block
-
-  &--input
-    border 0.5px solid #ccc
-    outline 0px
-    width 400px
-    height 30px
-    font-size 15px
-    display block
-    margin-bottom 10px
+    &--disabled
+      user-events none
+      cursor default
+      opacity 0.5
 
   &--textfield
     border 0.5px solid #ccc
@@ -65,3 +134,70 @@ a
     width 400px
     height 300px
     font-size 15px
+    padding 10px
+
+  // columns
+  &--columns
+    width 100%
+    &>div
+      display inline-block
+      vertical-align top
+  &--column50
+    width 50px
+  &--column100
+    width 100px
+  &--column150
+    width 150px
+  &--column200
+    width 200px
+  &--column250
+    width 250px
+  &--column300
+    width 300px
+  &--column350
+    width 350px
+  &--column400
+    width 400px
+  &--column450
+    width 450px
+  &--column500
+    width 500px
+  &--column550
+    width 550px
+  &--column600
+    width 600px
+  &--column650
+    width 650px
+  &--column700
+    width 700px
+  &--column750
+    width 750px
+  &--column800
+    width 800px
+  &--column850
+    width 850px
+  &--column900
+    width 900px
+  &--column950
+    width 950px
+  &--column1000
+    width 1000px
+
+  &--column--adaptive
+      @media (max-width: 667px)
+        width 100%
+  // helpers
+  &--vcenter
+    margin-left 50%
+    transform translateX(-50%)
+  &--hide
+    display none
+    &--mobile
+      @media (max-width: 667px)
+        display none
+    &--desktop
+      display none
+      @media (max-width: 667px)
+        display block
+  &--shadow
+    box-shadow 5px 5px 0px 0px rgba(0,0,0,0.1)

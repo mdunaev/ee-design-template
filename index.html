@@ -3,13 +3,187 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <title>EE Design Language</title>
 
         <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet" type="text/css">
         <link href="styles/ee-style.css" rel="stylesheet"  type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
 
+      <div class="ee--top-panel">
+        EE Design Language
+      </div>
+
+      <div class="ee--panel">
+
+        <h3 style="margin-top: 10px">Colors:</h3>
+          Use online <a href="./colors/index.html" target="_blank">color chooser</a>
+        <h3 style="margin-top: 20px">Layouts:</h3>
+        <div class="ee--panel" style="background-color:#EEEEEE">
+          This is ee--panel. <br>
+          Panel have a 10px margin and 10px padding.
+        </div>
+        <div class="ee--panel" style="background-color:#E4F1FE">
+          This is another ee--panel.
+        </div>
+        <div class="ee--panel" style="background-color:#A2DED0">
+          This is third ee--panel.
+        </div>
+
+        <div class="ee--columns">
+
+          <div class="ee--column200">
+            <div class="ee--panel" style="background-color:#E4F1FE">
+              ee--column200 in ee-panel
+            </div>
+          </div>
+
+          <div class="ee--column150">
+            <div class="ee--panel ee--shadow" style="background-color:#36D7B7">
+              ee--column150 in ee-panel with ee-shadow
+            </div>
+          </div>
+
+          <div class="ee--column250">
+            <div class="ee--panel" style="background-color:#ECF0F1">
+              ee--column250 in ee-panel
+            </div>
+          </div>
+
+          <div class="ee--column150 ee--column--adaptive">
+            <div class="ee--panel" style="background-color:#4183D7">
+              adaptive ee--column150 in ee-panel
+            </div>
+          </div>
+
+          <div class="ee--column150 ee--column--adaptive">
+            <div class="ee--panel" style="background-color:#22313F; color:#FCFCFC">
+              adaptive ee--column150 in ee-panel
+            </div>
+          </div>
+
+          <div class="ee--column150 ee--column--adaptive">
+            <div class="ee--panel" style="background-color:#ECF0F1">
+              adaptive ee--column150 in ee-panel
+            </div>
+          </div>
+
+        </div>
+
+        <h3 style="margin-top: 20px">Table:</h3>
+        <table>
+          <thead>
+            <tr>
+              <th data-field="id">Name</th>
+              <th data-field="name">Item Name</th>
+              <th data-field="price">Item Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Alvin</td>
+              <td>Eclair</td>
+              <td>$0.87</td>
+            </tr>
+            <tr>
+              <td>Alan</td>
+              <td>Jellybean</td>
+              <td>$3.76</td>
+            </tr>
+            <tr>
+              <td>Jonathan</td>
+              <td>Lollipop</td>
+              <td>$7.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3 style="margin-top: 20px">List:</h3>
+        <ul>
+          <li>
+            Haabersti
+          </li>
+          <li class="selected">
+            Pirita
+          </li>
+          <li>
+            Kesklinn
+          </li>
+          <li>
+            Vanalinn
+          </li>
+          <li>
+            Nõmme
+          </li>
+        </ul>
+        <h3 style="margin-top: 20px">Buttons:</h3>
+        <div class="ee--button">
+          Save
+        </div>
+        <div class="ee--button ee--button--disabled">
+          Disabled
+        </div>
+
+        <h3 style="margin-top: 20px">Form:</h3>
+
+        <h5 style="margin-top: 20px; margin-bottom: 10px;">input[type="text"]</h5>
+        <input placeholder="Placeholder" type="text">
+
+        <h5 style="margin-top: 20px; margin-bottom: 10px;">textarea</h5>
+        <textarea style="margin-top:10px; height: 200px"></textarea>
+
+        <h5 style="margin-top: 20px; margin-bottom: 10px;">select</h5>
+        <select>
+          <option value="" disabled selected>Choose your option</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+
+        <h5 style="margin-top: 20px; margin-bottom: 10px;">input[type="radio"]</h5>
+        <form action="#">
+            <input name="group1" type="radio" />
+            <label for="test1">Red</label>
+            <br>
+            <input name="group1" type="radio" />
+            <label for="test2">Yellow</label>
+            <br>
+            <input name="group1" type="radio" />
+            <label for="test3">Green</label>
+            <br>
+            <input name="group1" type="radio" />
+            <label for="test4">Brown</label>
+        </form>
+
+        <h5 style="margin-top: 20px; margin-bottom: 10px;">input[type="radio"]</h5>
+        <form action="#">
+            <input name="group1" type="checkbox" />
+            <label for="test1">Red</label>
+            <br>
+            <input name="group1" type="checkbox" />
+            <label for="test2">Yellow</label>
+            <br>
+            <input name="group1" type="checkbox" />
+            <label for="test3">Green</label>
+            <br>
+            <input name="group1" type="checkbox" />
+            <label for="test4">Brown</label>
+        </form>
+
+        <h3 style="margin-top: 20px;">Icons:</h3>
+        <div class="icon">&#xE90D;</div>
+        <div class="icon">&#xE90F;</div>
+        <div class="icon">&#xE91D;</div>
+        <div class="icon">&#xE56D;</div>
+        <br>
+        <a href="https://design.google.com/icons/">Material Icons Library</a>
+        <input value='<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">' type="text">
+      </div>
+
+      <div class="ee--footer-panel" style="text-align: right">
+        default design for <a href="http://mdunaev.github.io/">Meow!</a> 2016
+      </div>
     </body>
 </html>
